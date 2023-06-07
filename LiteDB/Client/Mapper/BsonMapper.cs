@@ -240,9 +240,7 @@ namespace LiteDB
                 lock (_entities)
                 {
                     if (!_entities.TryGetValue(type, out mapper))
-                    {
-                        return _entities[type] = this.BuildEntityMapper(type);
-                    }
+                        return this.BuildAddEntityMapper(type);
                 }
             }
 
@@ -253,9 +251,10 @@ namespace LiteDB
         /// Use this method to override how your class can be, by default, mapped from entity to Bson document.
         /// Returns an EntityMapper from each requested Type
         /// </summary>
-        protected virtual EntityMapper BuildEntityMapper(Type type)
+        protected virtual EntityMapper BuildAddEntityMapper(Type type)
         {
             var mapper = new EntityMapper(type);
+            _entities[type] = mapper;//direct add into entities, to solove the DBRef [ GetEntityMapper > BuildAddEntityMapper > RegisterDbRef > RegisterDbRefItem > GetEntityMapper ] Loop call recursion,we stoped at here and GetEntityMapper's _entities.TryGetValue
 
             var idAttr = typeof(BsonIdAttribute);
             var ignoreAttr = typeof(BsonIgnoreAttribute);
@@ -478,6 +477,7 @@ namespace LiteDB
         /// </summary>
         private static void RegisterDbRefItem(BsonMapper mapper, MemberMapper member, ITypeNameBinder typeNameBinder, string collection)
         {
+
             // get entity
             var entity = mapper.GetEntityMapper(member.DataType);
 

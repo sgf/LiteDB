@@ -2,16 +2,16 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFrameworks>net472;net5</TargetFrameworks>
-		<LangVersion>8</LangVersion>
+		<TargetFrameworks>net7</TargetFrameworks>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="BenchmarkDotNet" Version="0.12.0" />
+		<PackageReference Include="BenchmarkDotNet" Version="0.12.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\LiteDB\LiteDB.csproj" />
+		<ProjectReference Include="..\LiteDB\LiteDB.csproj" />
 	</ItemGroup>
 
 </Project>
