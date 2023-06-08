@@ -1,3 +1,21 @@
+### Fork Description
+
+Due to the many bugs in the LiteDB main library, the author may not be able to actively maintain it due to unknown reasons. Therefore, I will maintain this Fork branch for the time being.
+My maintenance plan is :
+1. fix bugs and optimize functions for a long time in the future.
+2. In terms of optimization, I consider registering functions such as Entity Mapper and EnsureIndex in advance when the application starts.
+Since I am also relatively poor, my work is also relatively busy, so I don't have much free time to maintain.
+In this case, it can be obtained directly when using it, thereby reducing some logic and judgment process.
+
+
+
+
+
+
+
+
+
+
 # LiteDB - A .NET NoSQL Document Store in a single data file
 
 [![Join the chat at https://gitter.im/mbdavid/LiteDB](https://badges.gitter.im/mbdavid/LiteDB.svg)](https://gitter.im/mbdavid/LiteDB?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build status](https://ci.appveyor.com/api/projects/status/sfe8he0vik18m033?svg=true)](https://ci.appveyor.com/project/mbdavid/litedb) [![Build Status](https://travis-ci.org/mbdavid/LiteDB.svg?branch=master)](https://travis-ci.org/mbdavid/LiteDB)
