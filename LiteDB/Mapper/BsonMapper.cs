@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -217,9 +217,7 @@ namespace LiteDB
                 lock (_entities)
                 {
                     if (!_entities.TryGetValue(type, out mapper))
-                    {
-                        return _entities[type] = BuildEntityMapper(type);
-                    }
+                        return BuildAddEntityMapper(type);
                 }
             }
 
@@ -230,13 +228,14 @@ namespace LiteDB
         /// Use this method to override how your class can be, by default, mapped from entity to Bson document.
         /// Returns an EntityMapper from each requested Type
         /// </summary>
-        protected virtual EntityMapper BuildEntityMapper(Type type)
+        protected virtual EntityMapper BuildAddEntityMapper(Type type)
         {
             var mapper = new EntityMapper
             {
                 Members = new List<MemberMapper>(),
                 ForType = type
             };
+            _entities[type] = mapper;
 
             var idAttr = typeof(BsonIdAttribute);
             var ignoreAttr = typeof(BsonIgnoreAttribute);
@@ -355,7 +354,7 @@ namespace LiteDB
                 .Where(x => x.CanRead && x.GetIndexParameters().Length == 0)
                 .Select(x => x as MemberInfo));
 
-            if(this.IncludeFields)
+            if (this.IncludeFields)
             {
                 members.AddRange(type.GetFields(flags).Where(x => !x.Name.EndsWith("k__BackingField") && x.IsStatic == false).Select(x => x as MemberInfo));
             }
