@@ -4,9 +4,8 @@ Due to the many bugs in the LiteDB main library, the author may not be able to a
 My maintenance plan is :
 1. fix bugs and optimize functions for a long time in the future.
 2. In terms of optimization, I consider registering functions such as Entity Mapper and EnsureIndex in advance when the application starts.
-Since I am also relatively poor, my work is also relatively busy, so I don't have much free time to maintain.
 In this case, it can be obtained directly when using it, thereby reducing some logic and judgment process.
-
+3. Since I am also relatively poor, my work is also relatively busy, so I don't have much free time to maintain.
 
 
 
