@@ -8,9 +8,7 @@ In this case, it can be obtained directly when using it, thereby reducing some l
 3. Since I am also relatively poor, my work is also relatively busy, so I don't have much free time to maintain.
 
 
-
-
-
+Now: this fork only fixed a `Self BsonRef` bug    https://github.com/mbdavid/LiteDB/issues/2310
 
 
 
