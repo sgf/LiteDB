@@ -1,16 +1,16 @@
 ### Fork Description
 
-Due to the many bugs in the LiteDB main library, the author may not be able to actively maintain it due to unknown reasons. Therefore, I will maintain this Fork branch for the time being.
-My maintenance plan is :
-1. fix bugs and optimize functions for a long time in the future.
-2. In terms of optimization, I consider registering functions such as Entity Mapper and EnsureIndex in advance when the application starts.
-In this case, it can be obtained directly when using it, thereby reducing some logic and judgment process.
-3. Since I am also relatively poor, my work is also relatively busy, so I don't have much free time to maintain.
+
 
 
 Now: this fork only fixed a `Self BsonRef` bug    https://github.com/mbdavid/LiteDB/issues/2310
 
-
+~~Due to the many bugs in the LiteDB main library, the author may not be able to actively maintain it due to unknown reasons. Therefore, I will maintain this Fork branch for the time being.~~
+~~My maintenance plan is :~~
+~~1. fix bugs and optimize functions for a long time in the future.
+2. In terms of optimization, I consider registering functions such as Entity Mapper and EnsureIndex in advance when the application starts.
+In this case, it can be obtained directly when using it, thereby reducing some logic and judgment process.
+3. Since I am also relatively poor, my work is also relatively busy, so I don't have much free time to maintain.~~
 
 
 # LiteDB - A .NET NoSQL Document Store in a single data file
