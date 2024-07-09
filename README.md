@@ -1,9 +1,9 @@
 ### Fork Description
 
 
+Now this repo bug is merage into the org-repo
 
-
-Now: this fork only fixed a `Self BsonRef` bug    https://github.com/mbdavid/LiteDB/issues/2310
+~~Now: this fork only fixed a `Self BsonRef` bug    https://github.com/mbdavid/LiteDB/issues/2310,~~
 
 ~~Due to the many bugs in the LiteDB main library, the author may not be able to actively maintain it due to unknown reasons. Therefore, I will maintain this Fork branch for the time being.~~
 ~~My maintenance plan is :~~
